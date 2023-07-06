@@ -24,7 +24,7 @@ const validateAccessToken = async (accessToken, publicKeys) => {
     return verifiedToken;
 };
 
-const run = async (accessToken) => {
+const validate = async (accessToken) => {
     try {
         const publicKeys = await fetchPublicKeys();
         const verifiedToken = await validateAccessToken(accessToken, publicKeys);
@@ -35,4 +35,4 @@ const run = async (accessToken) => {
     }
 };
 
-run(accessToken);
+validate(accessToken);
